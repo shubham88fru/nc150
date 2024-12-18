@@ -1,6 +1,6 @@
 from typing import List
 
-
+# @link - https://neetcode.io/problems/duplicate-integer
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         dic = {};
