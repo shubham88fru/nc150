@@ -1,6 +1,13 @@
 import heapq
 from typing import List
 
+# /**
+#  * NOTE: Apparently there's a bucket sort solution as well
+#  * or some solution with simple hashmap, which has a better TC
+#  * than the heap solution. If this problem is a
+#  * recurring problem for some company, check that approach
+#  * as well.
+#  */
 # @link - https://neetcode.io/problems/top-k-elements-in-list
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
