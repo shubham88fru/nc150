@@ -1,0 +1,38 @@
+from typing import List
+
+# @link - https://neetcode.io/problems/valid-sudoku
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        rows = {}
+        cols = {}
+        cells = {}
+
+        m = len(board)
+        n = len(board[0])
+
+        for i in range(m):
+            for j in range(n):
+                ch = board[i][j]
+                if ch == '.':
+                    continue
+
+                if i not in rows:
+                    rows[i] = set()
+                if ch in rows[i]:
+                    return False
+                rows[i].add(ch)
+
+                if j not in cols:
+                    cols[j] = set()
+                if ch in cols[j]:
+                    return False
+                cols[j].add(ch)
+
+                str_key = str(i // 3) + str(j // 3)
+                if str_key not in cells:
+                    cells[str_key] = set()
+                if ch in cells[str_key]:
+                    return False
+                cells[str_key].add(ch)
+
+        return True
