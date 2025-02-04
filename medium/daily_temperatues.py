@@ -1,6 +1,6 @@
 from typing import List
 
-#@link - https://neetcode.io/problems/daily-temperatures
+# @link - https://neetcode.io/problems/daily-temperatures
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         # return self.optimal(temperatures)
