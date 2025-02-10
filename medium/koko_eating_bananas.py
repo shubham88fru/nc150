@@ -1,3 +1,4 @@
+import math
 from typing import List
 
 # @link - https://neetcode.io/problems/eating-bananas
