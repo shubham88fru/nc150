@@ -11,6 +11,8 @@ class Solution:
     # has a better TC. Also showed brute and greedy.
     # Check those soln if this is a recurring problem
     # for some company.
+    # Edctv also a has a different soln that runs faster
+    # than my appraoch (check my java solns for edctv)
     def solve(self, tasks, n):
         minTime = [0] * 26
         min_heap = []
