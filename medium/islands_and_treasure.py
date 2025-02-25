@@ -1,3 +1,4 @@
+from collections import deque
 from typing import List
 
 # @link - https://neetcode.io/problems/islands-and-treasure
