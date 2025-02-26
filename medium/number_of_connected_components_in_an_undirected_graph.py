@@ -5,7 +5,7 @@ class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         return self.solve(n, edges)
 
-    # I'm really sure if this is the optimal approach for
+    # I'm not really sure if this is the optimal approach for
     # this problem (more likely not). Check online solutions
     # for the optimal appraoch.
     def solve(self, n, edges):
