@@ -5,6 +5,8 @@ class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         return self.solve(matrix)
 
+    # Edctv has a soln that doesn't take extra space
+    # check my java soln for that.
     def solve(self, matrix):
         m = len(matrix)
         n = len(matrix[0])
