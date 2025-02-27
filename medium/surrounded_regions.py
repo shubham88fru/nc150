@@ -5,6 +5,9 @@ class Solution:
     def solve(self, board: List[List[str]]) -> None:
         self.nasty_brute_force(board)
 
+    # 100% that this isn't the ideal soln.
+    # NEED to check the optimal soln. Most
+    # likely DSU.
     def nasty_brute_force(self, board):
         m = len(board)
         n = len(board[0])
