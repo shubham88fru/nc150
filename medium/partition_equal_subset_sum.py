@@ -6,7 +6,7 @@ class Solution:
         return self.solve(nums)
 
     # This is a 2d dp approach which I
-    # dont this is ideal. Redo during revision.
+    # dont think is ideal. Redo during revision.
     def solve(self, nums):
         n = len(nums)
 
