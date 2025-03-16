@@ -3,6 +3,8 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
         return self.solve(s, t)
 
+    # 1. Optimal using Sliding window.
+    # TC: O(m+n), SC: O(m+n)
     def solve(self, s, t):
         m = len(s)
         n = len(t)
@@ -45,3 +47,6 @@ class Solution:
             r += 1
 
         return "" if min_len == 999999999 else s[sub[0]:sub[1] + 1]
+
+    # 2. Brute force by generating all substrings
+    # and checking.
