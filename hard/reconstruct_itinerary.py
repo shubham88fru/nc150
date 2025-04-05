@@ -2,6 +2,11 @@ from typing import List
 
 # @link - https://neetcode.io/problems/reconstruct-flight-path
 class Solution:
+
+    # This soln is based on nc and miks approach.
+    # Whilst it passes on nc platform, it doesn't pass
+    # on LC.
+    # The optimal approach uses min heap
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
         tickets.sort(key=lambda x: (x[0], x[1]))
         graph = {}
