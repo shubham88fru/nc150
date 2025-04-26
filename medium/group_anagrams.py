@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+-------------------------------------
+OPTIMAL: 26 length freq array and map
+-------------------------------------
+TC: O(n*k + 26); k is length of longest string.
+SC: O(anagrams)
+
+---------------------------------------------------------
+BETTER: sort each and create map for sorted v/s anagrams.
+---------------------------------------------------------
+TC: O(n*klog(k)) ; k is length of longest string.
+SC: O(anagrams)
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/anagram-groups
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
