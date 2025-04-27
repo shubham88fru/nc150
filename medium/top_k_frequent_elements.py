@@ -1,6 +1,27 @@
 import heapq
 from typing import List
 
+""""""""""""""""""""""""""""
+-------------------------------------------
+OPTIMAL: map and bucket array (bucket sort)
+-------------------------------------------
+TC: O(n)
+SC: O(d + n)
+
+------------------------
+BETTER: min heap and map
+------------------------
+TC: O(n*klog(k)) ;
+SC: O(k)
+
+------------------------------------------------------
+BRUTE: Hashmap for freq --> to list of tuples --> sort.
+------------------------------------------------------
+TC: O(n + d + dlog(d)) ; d is the number of distinct elements
+SC: O(2*d)
+
+"""""""""""""""""""""""""""
+
 # /**
 #  * NOTE: Apparently there's a bucket sort solution as well
 #  * or some solution with simple hashmap, which has a better TC
