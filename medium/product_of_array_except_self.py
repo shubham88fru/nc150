@@ -1,5 +1,33 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+---------------------------------------------------
+FOLLOW UP: Without extra space for pp and sp 
+           --> use the result array to store pp and 
+           then multiply sp (mik showed this)
+---------------------------------------------------
+TC: O(n)
+SC: O(1)
+
+-----------------------------------
+OPTIMAL: Prefix and suffix product.
+-----------------------------------
+TC: O(n)
+SC: O(n)
+
+------------------------------------
+BETTER: Divide overall pdt, by self.
+------------------------------------
+TC: O(n)
+SC: O(1)
+
+-------------------------------------------------
+BRUTE: For each element, find the product of rest
+-------------------------------------------------
+TC: O(n^2)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/products-of-array-discluding-self
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
@@ -15,7 +43,7 @@ class Solution:
         sp[n - 1] = 1
 
         for i in range(1, n):
-            pp[i] = pp[i - 1] * nums[i - 1];
+            pp[i] = pp[i - 1] * nums[i - 1]
             sp[n - i - 1] = sp[n - i] * nums[n - i]
 
         ans = []
