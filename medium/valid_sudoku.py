@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+----------------------------
+OPTIMAL: Hashmap and HashSet
+----------------------------
+TC: O(n^2)
+SC: O(n^2)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+-------------------------------------------------
+BRUTE: Separate loops for each row, col and boxes 
+-------------------------------------------------
+TC: O(n^2)
+SC: O(n^2)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/valid-sudoku
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
