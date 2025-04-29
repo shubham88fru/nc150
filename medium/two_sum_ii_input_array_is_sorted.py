@@ -6,7 +6,7 @@ TC: O(n)
 SC: O(1)
 
 ---------------
-BETTER: Hashamp
+BETTER: Hashmap
 ---------------
 TC: O(n)
 SC: O(n)
