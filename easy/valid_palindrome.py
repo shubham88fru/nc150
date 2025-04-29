@@ -1,4 +1,23 @@
+""""""""""""""""""""""""""""
+--------------------
+OPTIMAL: Two pointer
+--------------------
+TC: O(n)
+SC: O(1)
 
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+-----------------------------------------------------------------------------------------
+BRUTE: For a new string by removing non alphanumeric characters, then reverse and compare
+-----------------------------------------------------------------------------------------
+TC: O(n+n)
+SC: O(n)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/is-palindrome
 class Solution:
     def isPalindrome(self, s: str) -> bool:
