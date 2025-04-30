@@ -1,10 +1,29 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+---------------------
+OPTIMAL: Two pointers
+---------------------
+TC: O(n)
+SC: O(1)
+
+------------------------------------
+BETTER: 
+------------------------------------
+TC: 
+SC:
+
+------------------
+BRUTE: 2 for loops
+------------------
+TC: O(n^2)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/max-water-container
 def maxArea(self, heights: List[int]) -> int:
     # return self.brute(heights)
     return self.optimal(heights)
-
 
 def optimal(self, height):
     i = 0
