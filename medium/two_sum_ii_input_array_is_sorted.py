@@ -1,3 +1,5 @@
+from typing import List
+
 """"""""""""""""""""""""""""
 ---------------------
 OPTIMAL: Two pointers
@@ -18,8 +20,6 @@ TC:
 SC:
 
 """""""""""""""""""""""""""
-from typing import List
-
 # @link - https://neetcode.io/problems/two-integer-sum-ii
 def twoSum(self, numbers: List[int], target: int) -> List[int]:
     p1 = 0;
