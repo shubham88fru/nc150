@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+-------------------
+OPTIMAL: 3 pointers
+-------------------
+TC: O(n^2 + nlog(n))
+SC: O(1)
+
+-------------------------
+BETTER: 2 loops and 2 sum
+-------------------------
+TC: O(n^2)
+SC: O(n)
+
+------------------
+BRUTE: 3 for loops
+------------------
+TC: O(n^3)
+SC: O(num of triplets)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/three-integer-sum
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
