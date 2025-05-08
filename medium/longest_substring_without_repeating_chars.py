@@ -1,4 +1,24 @@
 
+""""""""""""""""""""""""""""
+---------------------------------------------------------
+OPTIMAL: Sliding window with optimized deletion strategy.
+---------------------------------------------------------
+TC: O(n)
+SC: O(1)
+
+--------------------------------------------------------
+BETTER: Sliding window by deleting chars in a while loop
+--------------------------------------------------------
+TC: O(n)
+SC: O(1) coz only fixed set of chars.
+
+----------------------------------------------------------------
+BRUTE: Generate all substring and keep checking if repeating.
+----------------------------------------------------------------
+TC: O(n^2)
+SC: O(1) if using a fixed array for freq.
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/longest-substring-without-duplicates
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
