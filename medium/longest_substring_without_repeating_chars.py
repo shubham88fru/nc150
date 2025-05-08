@@ -3,7 +3,51 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         # return self.pass1(s)
-        return self.pass2(s)
+        # return self.pass2(s)
+        # return self.revise(s)
+        return self.revise2(s)
+
+    # Soln based on the new sliding
+    # window template.
+    def revise2(self, s):
+        mp = {}
+        n = len(s)
+
+        l = 0
+        r = 0
+        mx = 0
+        while r < n:
+            if s[r] in mp and mp[s[r]] >= l:
+                l = mp[s[r]] + 1
+
+            mp[s[r]] = r
+            mx = max(mx, r - l + 1)
+            r += 1
+
+        return mx
+
+    def revise(self, s):
+        mp = {}
+        n = len(s)
+
+        l = 0
+        r = 0
+        mx = 0
+        while r < n:
+            if s[r] not in mp:
+                mp[s[r]] = 0
+
+            mp[s[r]] += 1
+            while mp[s[r]] > 1:
+                mp[s[l]] -= 1
+                if mp[s[l]] == 0:
+                    del mp[s[l]]
+                l += 1
+
+            mx = max(mx, r - l + 1)
+            r += 1
+
+        return mx
 
     # A bit ineffecient when
     # removing repeated char.
