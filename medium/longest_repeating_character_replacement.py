@@ -1,4 +1,23 @@
+""""""""""""""""""""""""""""
+-----------------------
+OPTIMAL: Sliding window
+-----------------------
+TC: O(n)
+SC: O(26)
 
+-------------------------------------------------
+BETTER: Sliding window with continuous freq check
+-------------------------------------------------
+TC: O(n*26)
+SC: O(26)
+
+---------------------------------------------------------------
+BRUTE: Generate all substrings and and check maxFreq - len <= k
+---------------------------------------------------------------
+TC: O(n^2)
+SC: O(26)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/longest-repeating-substring-with-replacement
 # @check - https://www.youtube.com/watch?v=gqXU1UyA8pk&ab_channel=NeetCode
 class Solution:
