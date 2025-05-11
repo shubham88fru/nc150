@@ -1,3 +1,23 @@
+""""""""""""""""""""""""""""
+-----------------------
+OPTIMAL: Sliding window
+-----------------------
+TC: O(m + n)
+SC: O(26) for freq array.
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+------------------------------------------------------------------------------------------
+BRUTE: Two for loops. For each start index find substring that has all chars of t. (strvr)
+------------------------------------------------------------------------------------------
+TC: O(n^2)
+SC: O(26)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/minimum-window-with-characters
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
@@ -49,4 +69,3 @@ class Solution:
         return "" if min_len == 999999999 else s[sub[0]:sub[1] + 1]
 
     # 2. Brute force by generating all substrings
-    # and checking.
