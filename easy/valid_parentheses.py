@@ -1,6 +1,9 @@
 # @link - https://neetcode.io/problems/validate-parentheses
 class Solution:
     def isValid(self, s: str) -> bool:
+        return self.solve(s)
+
+    def solve(self, s):
         pairs = { '}': '{', ')': '(', ']': '[' };
         stack = []
 
