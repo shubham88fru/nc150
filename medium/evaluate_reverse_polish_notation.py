@@ -5,14 +5,12 @@ class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         ops = set(["+", "-", "*", "/"])
         stack = [tokens[0]]
-        res = 0
         for i in range(1, len(tokens)):
             token = tokens[i]
             if token in ops:
                 num1 = int(stack.pop())
                 num2 = int(stack.pop())
                 res = self.operate(num1, num2, token)
-                print(num1, num2, token, res)
                 stack.append(res)
 
             else:
