@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+----------------
+OPTIMAL: Stacks
+----------------
+TC: O(n)
+SC: O(n)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/evaluate-reverse-polish-notation
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
