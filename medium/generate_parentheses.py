@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+-------------------------------------
+OPTIMAL: smart recursion/backtracking.
+-------------------------------------
+TC: O(2^2n)
+SC: O(2n)
+
+------------------------------------
+BETTER: 
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------------------------------------------
+BRUTE: Generate all possible combinations and for each use stack to check if valid.
+----------------------------------------------------------------------------------
+TC: O(2n * 2^2n)
+SC: O(2n) ; depth of recursive tree.
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/generate-parentheses
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
