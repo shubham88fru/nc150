@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+--------------
+OPTIMAL: Stack
+--------------
+TC: O(n)
+SC: O(n)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+---------------------------------------------------
+BRUTE: For each day, find the first higher on right
+---------------------------------------------------
+TC: O(n^2)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/daily-temperatures
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
