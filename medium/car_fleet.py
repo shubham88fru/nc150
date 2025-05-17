@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+---------------------------------------------------------------
+OPTIMAL: Sort (no need to use stack. see comments in java soln)
+---------------------------------------------------------------
+TC: O(nlog(n) + n) 
+SC: O(n)
+
+------------------------------------
+BETTER: Sort + stack
+------------------------------------
+TC: O(nlog(n) + n) 
+SC: O(n + fleet)
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/car-fleet
 # @check - https://www.youtube.com/watch?v=Pr6T-3yB9RM&ab_channel=NeetCode
 class Solution:
