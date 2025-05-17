@@ -7,9 +7,9 @@ OPTIMAL: Sort (no need to use stack. see comments in java soln)
 TC: O(nlog(n) + n) 
 SC: O(n)
 
-------------------------------------
+--------------------
 BETTER: Sort + stack
-------------------------------------
+--------------------
 TC: O(nlog(n) + n) 
 SC: O(n + fleet)
 
