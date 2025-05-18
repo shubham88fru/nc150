@@ -1,6 +1,26 @@
 import math
 from typing import List
 
+""""""""""""""""""""""""""""
+----------------------
+OPTIMAL: Binary search
+----------------------
+TC: O(n + n*log(max(arr))
+SC:
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+-----------------------------------------------------------------------------------------
+BRUTE: Linear search. Start with 1 banana and see if possible, keep increasing one by one
+-----------------------------------------------------------------------------------------
+TC: O(n*max(arr)) ; where max(arr) is the maximum of the given piles.
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/eating-bananas
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
