@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+----------------------
+OPTIMAL: Binary search
+----------------------
+TC: O(log(n))
+SC: O(1)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+--------------------
+BRUTE: Linear search
+--------------------
+TC: O(n)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/find-minimum-in-rotated-sorted-array
 class Solution:
     def findMin(self, nums: List[int]) -> int:
