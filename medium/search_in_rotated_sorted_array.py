@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+-----------------------
+OPTIMAL: Binary search.
+-----------------------
+TC: O(log(n))
+SC: O(1)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+---------------------
+BRUTE: Linear search.
+---------------------
+TC: O(n)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/find-target-in-rotated-sorted-array
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
