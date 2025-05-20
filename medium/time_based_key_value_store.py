@@ -1,7 +1,33 @@
 
+""""""""""""""""""""""""""""
+----------------------
+OPTIMAL: Binary search 
+----------------------
+TC: O(log(max(len)); where max(len) is the max length of values for a key.
+SC: O(1)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+--------------------------------
+BRUTE: Linear search of each key
+--------------------------------
+TC: O(max(len)); where max(len) is the max length of values for a key.
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/time-based-key-value-store
 class TimeMap:
 
+    # /*
+    # * UPDATE 05/20: If using python, we don't really need
+    # * two map. We can take a single Map of string v/s type.
+    # * In Java however, since we can't have tuple or list
+    # * with two different types in it, we need to use two maps.
+    # * */
     def __init__(self):
         self.tmMap = {}
         self.tmList = {}
