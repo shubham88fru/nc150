@@ -1,3 +1,23 @@
+""""""""""""""""""""""""""""
+-----------------------
+OPTIMAL: In place merge
+-----------------------
+TC: O(m+n)
+SC: O(1)
+
+------------------------------------------------
+BETTER: Merge two sorted list using a third list
+------------------------------------------------
+TC: O(m+n)
+SC: O(m+n)
+
+-----------------------------------------------------------------
+BRUTE: Put the lists in a common list and sort the list then link
+-----------------------------------------------------------------
+TC: O(n + m + (m+n)log(m+n) + (m+n))
+SC: O(m+n)
+
+"""""""""""""""""""""""""""
 # Definition for singly-linked list.
 from typing import Optional
 
@@ -14,36 +34,31 @@ class Solution:
         return self.optimal(list1, list2)
 
     # constant space.
-    def optimal(self, list1, list2):
-        if list1 == None:
-            return list2
+    def optimal(self, l1, l2):
+        if l1 is None:
+            return l2
 
-        if list2 == None:
-            return list1
+        if l2 is None:
+            return l1
 
-        if list2.val < list1.val:
-            temp = list1
-            list1 = list2
-            list2 = temp
+        dummy = ListNode(-1)
+        prev = dummy
 
-        curr1 = list1
-        curr2 = list2
-        prev = ListNode(-1)
-        while curr1 != None and curr2 != None:
-            if curr1.val <= curr2.val:
-                prev.next = curr1
-                prev = curr1
-                nxt = curr1.next
-                curr1.next = curr2
-                curr1 = nxt
+        while l1 is not None and l2 is not None:
+            if l1.val <= l2.val:
+                nxt = l1.next
+                l1.next = l2
+                prev.next = l1
+                prev = l1
+                l1 = nxt
             else:
-                prev.next = curr2
-                prev = curr2
-                nxt = curr2.next
-                curr2.next = curr1
-                curr2 = nxt
+                nxt = l2.next
+                l2.next = l1
+                prev.next = l2
+                prev = l2
+                l2 = nxt
 
-        return list1
+        return dummy.next
 
     # extra space for a brand new merged list.
     def suboptimal(self, list1, list2):
@@ -62,17 +77,9 @@ class Solution:
 
             curr3 = curr3.next
 
-        # while curr1 != None:
-        #     curr3.next = ListNode(curr1.val)
-        #     curr1 = curr1.next
-        #     curr3 = curr3.next
         if curr1 != None:
             curr3.next = curr1
 
-        # while curr2 != None:
-        #     curr3.next = ListNode(curr2.val)
-        #     curr2 = curr2.next
-        #     curr3 = curr3.next
         if curr2 != None:
             curr3.next = curr2
 
