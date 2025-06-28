@@ -2,7 +2,7 @@
 ------------------------------------
 OPTIMAL: Simple linkedlist operation
 ------------------------------------
-TC: O(n)
+TC: O(max(n1, n2)); where n1 and n2 are lengths of individual lists.
 SC: O(1)
 
 ------------------------------------
