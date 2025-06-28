@@ -1,9 +1,9 @@
 """"""""""""""""""""""""""""
-----------------
-OPTIMAL:
-----------------
-TC:
-SC:
+------------------------------------
+OPTIMAL: Simple linkedlist operation
+------------------------------------
+TC: O(n)
+SC: O(1)
 
 ------------------------------------
 BETTER:
@@ -29,6 +29,11 @@ from typing import Optional
 
 # @link - https://neetcode.io/problems/add-two-numbers
 class Solution:
+    """
+      Strvr and Nc showed a soln which has
+      the exact same appraoch and TC but is a
+      bit cleaner coz it uses lesser number of loops.
+    """
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         return self.sumLL(l1, l2)
 
