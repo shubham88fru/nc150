@@ -1,7 +1,7 @@
 ## Solutions to Neetcode 150 list problems in python.
 ### Some solutions are bruteforce/suboptimal.
 
-# TLDR Template
+# TL;DR Template
 """"""""""""""""""""""""""""
 ----------------
 OPTIMAL:
