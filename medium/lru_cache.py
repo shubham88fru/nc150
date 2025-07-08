@@ -28,7 +28,6 @@ class DLL:
 
 # @link - https://neetcode.io/problems/lru-cache
 class LRUCache:
-
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = {}
