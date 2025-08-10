@@ -1,6 +1,26 @@
 # Definition for singly-linked list.
 import heapq
 
+""""""""""""""""""""""""""""
+-------------------
+OPTIMAL: merge sort
+-------------------
+TC: O(N*logK); where N is the total numer of nodes across all lists
+SC: O(1)
+
+-------------------
+BETTER: Using heaps
+-------------------
+TC: O(N*logK); where N is the total number of nodes across all lists
+SC: O(K)
+
+-------------
+BRUTE: Simple
+-------------
+TC: O(N*K); where N is the total number of nodes across all lists
+SC: O(1)
+
+"""""""""""""""""""""""""""
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -15,7 +35,39 @@ class Solution:
         return self.solve(lists)
 
     def solve(self, lists):
-        return self.approach1(lists)
+        # return self.approach1(lists)
+        return self.optimal(lists)
+
+    # 1. Optimal
+    def optimal(self, lists):
+        if not lists or len(lists) == 0:
+            return None
+
+        return self.merge_sort(lists, 0, len(lists) - 1)
+
+    def merge_sort(self, lists, l, r):
+        if l == r:
+            return lists[l]
+
+        mid = l + (r - l) // 2
+        l1 = self.merge_sort(lists, l, mid)
+        l2 = self.merge_sort(lists, mid + 1, r)
+
+        return self.merge_recursive(l1, l2)
+
+    def merge_recursive(self, l1, l2):
+        if not l1:
+            return l2
+
+        if not l2:
+            return l1
+
+        if l1.val <= l2.val:
+            l1.next = self.merge_recursive(l1.next, l2)
+            return l1
+
+        l2.next = self.merge_recursive(l1, l2.next)
+        return l2
 
     def approach1(self, lists):
         n = len(lists)
