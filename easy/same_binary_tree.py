@@ -1,4 +1,24 @@
 # Definition for a binary tree node.
+""""""""""""""""""""""""""""
+------------
+OPTIMAL: DFS
+------------
+TC: O(n)
+SC: O(1)
+
+---------------------
+BETTER: BFS (2 queue)
+---------------------
+TC: O(n)
+SC: O(1)
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
