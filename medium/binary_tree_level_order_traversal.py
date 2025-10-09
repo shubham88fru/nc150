@@ -1,3 +1,23 @@
+""""""""""""""""""""""""""""
+------------
+OPTIMAL: BFS
+------------
+TC: O(n)
+SC: O(n/2); queue size will be at max n/2
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,11 +30,12 @@ from typing import Optional, List
 # @link - https://neetcode.io/problems/level-order-traversal-of-binary-tree
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        return self.bfs(root)
+        return self.revise(root)
 
-    def bfs(self, root):
+    def revise(self, root):
         ans = []
-        if root is None:
+
+        if not root:
             return ans
 
         q = deque()
@@ -22,19 +43,19 @@ class Solution:
 
         while q:
             sz = len(q)
-            sub = []
-
+            level = []
             while sz > 0:
-                node = q.popleft()
-                if node.left is not None:
-                    q.append(node.left)
+                rt = q.popleft()
+                level.append(rt.val)
 
-                if node.right is not None:
-                    q.append(node.right)
+                if rt.left:
+                    q.append(rt.left)
 
-                sub.append(node.val)
+                if rt.right:
+                    q.append(rt.right)
+
                 sz -= 1
 
-            ans.append(sub)
+            ans.append(level)
 
         return ans
