@@ -1,3 +1,23 @@
+""""""""""""""""""""""""""""
+------------
+OPTIMAL: DFS
+------------
+TC: O(n)
+SC: O(1)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+--------------------------------------------
+BRUTE: For each node check it left and right
+--------------------------------------------
+TC: O(n^2)
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
