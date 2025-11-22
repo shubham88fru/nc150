@@ -18,21 +18,23 @@ TC:
 SC:
 
 """""""""""""""""""""""""""
+
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-from typing import Optional
+
 
 # @link - https://neetcode.io/problems/serialize-and-deserialize-binary-tree
 
-#Following is the DFS soln.
-#There's a BFS soln also which has
-#same TC/SC, but it's just a different
-#approach to know. My java playlist has
-#that approach.
+# Following is the DFS soln.
+# There's a BFS soln also which has
+# same TC/SC, but it's just a different
+# approach to know. My java playlist has
+# that approach.
 class Codec:
 
     def serialize(self, root):
