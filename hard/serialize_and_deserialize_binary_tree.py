@@ -1,3 +1,23 @@
+""""""""""""""""""""""""""""
+--------------------
+OPTIMAL: DFS and BFS
+--------------------
+TC: O(n)
+SC: O(n)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -7,46 +27,52 @@ class TreeNode:
 from typing import Optional
 
 # @link - https://neetcode.io/problems/serialize-and-deserialize-binary-tree
+
+#Following is the DFS soln.
+#There's a BFS soln also which has
+#same TC/SC, but it's just a different
+#approach to know. My java playlist has
+#that approach.
 class Codec:
-    i = 0
 
-    # Encodes a tree to a single string.
-    def serialize(self, root: Optional[TreeNode]) -> str:
-        enc = [""]
-        self.ser(root, enc)
-        return enc[0]
+    def serialize(self, root):
+        """Encodes a tree to a single string.
 
-    # Decodes your encoded data to tree.
-    def deserialize(self, data: str) -> Optional[TreeNode]:
-        return self.des(data)
+        :type root: TreeNode
+        :rtype: str
+        """
+        lst = []
+        self.ser(root, lst)
+        return ",".join(lst)
 
-    def ser(self, root, enc):
-        if root is None:
-            enc[0] += "$"
+    def ser(self, root, lst):
+        if not root:
+            lst.append("#")
             return
 
-        enc[0] += str(root.val) + "#"
-        self.ser(root.left, enc)
-        self.ser(root.right, enc)
+        lst.append(str(root.val))
 
-    def des(self, data):
-        if self.i >= len(data):
+        self.ser(root.left, lst)
+        self.ser(root.right, lst)
+
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+
+        :type data: str
+        :rtype: TreeNode
+        """
+        nodes = data.split(",")
+        return self.deser(nodes, [0])
+
+    def deser(self, nodes, i):
+        if (nodes[i[0]] == "#"):
+            i[0] += 1
             return None
 
-        ch = data[self.i]
-        if ch == "$":
-            self.i += 1
-            return None
+        root = TreeNode(int(nodes[i[0]]))
 
-        sub = ""
-        while (self.i < len(data) and data[self.i] != "#"):
-            sub += data[self.i]
-            self.i += 1
+        i[0] += 1
+        root.left = self.deser(nodes, i)
+        root.right = self.deser(nodes, i)
 
-        node = TreeNode(int(sub))
-
-        self.i += 1
-        node.left = self.des(data)
-        node.right = self.des(data)
-
-        return node
+        return root
