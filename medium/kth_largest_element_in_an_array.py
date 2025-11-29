@@ -1,19 +1,46 @@
 import heapq
 from typing import List
 
+""""""""""""""""""""""""""""
+--------------------------
+OPTIMAL: Quick select algo
+--------------------------
+TC: O(n) on average but worst case can be O(nˆ2)
+SC: O(1); in-place algo.
+
+----------------
+BETTER: Min heap
+----------------
+TC: O(nlog(k))
+SC: O(k)
+
+--------------
+BRUTE: Sorting
+--------------
+TC: O(nlog(n))
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/kth-largest-element-in-an-array
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        return self.solve(nums, k)
+        return self.heap_sol(nums, k)
 
-    def solve(self, nums, k):
-        min_heap = []
+    # Following is a heap soln,
+    # but there's a popular quick
+    # select algo which mik showed.
+    # Was too lazy to code it but
+    # its definitely an approach
+    # worth knowing because of its
+    # TC benefits.
+    def heap_sol(self, nums, k):
+        n = len(nums)
 
-        for i in range(0, len(nums)):
-            if len(min_heap) < k:
-                heapq.heappush(min_heap, nums[i])
-            elif nums[i] > min_heap[0]:
-                heapq.heappop(min_heap)
-                heapq.heappush(min_heap, nums[i])
+        heap = []
+        for n in nums:
+            heapq.heappush(heap, n)
 
-        return min_heap[0]
+            if len(heap) > k:
+                heapq.heappop(heap)
+
+        return heap[0]
