@@ -1,6 +1,26 @@
 import heapq
 from typing import List
 
+""""""""""""""""""""""""""""
+-------------------------
+OPTIMAL: Merge using heap
+-------------------------
+TC: O(10*log(k)); where k is the number of followees
+SC: O(1)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+-----------------------------------
+BRUTE: Standard merge k sorted list
+-----------------------------------
+TC: O(10*k); where k is the number of followees
+SC: O(1)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/design-twitter-feed
 class Twitter:
 
