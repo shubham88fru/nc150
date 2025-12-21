@@ -50,7 +50,7 @@ class Twitter:
         while len(min_heap) > 0 and len(ans) < 10:
             data = heapq.heappop(min_heap)
             ans.append(data[1])
-            # print(ans)
+
             if data[3] >= 0:
                 next_tweet = self.tweets_map[data[2]][data[3]]
                 heapq.heappush(min_heap, [next_tweet[0], next_tweet[1], data[2], data[3] - 1])
