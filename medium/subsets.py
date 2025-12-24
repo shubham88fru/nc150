@@ -1,10 +1,45 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+----------------------------------
+OPTIMAL: OR approach
+----------------------------------
+TC: O(n*2ˆn)
+SC: O(1)
+
+-----------------
+BETTER: Backtrack
+-----------------
+TC: O(n*2ˆn)
+SC: O(n); auxiliary stack space.
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/subsets
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         # return self.solve1(nums)
         return self.solve2(nums)
+
+    # Approach 3: Using OR
+    def or_approach(self, nums):
+        n = len(nums)
+        m = 2 ** n
+        subs = []
+        for i in range(0, m):
+            sub = []
+            for j in range(0, n):
+                if self.bitset(i, j):
+                    sub.append(nums[j])
+
+            subs.append(sub)
+
+        return subs
 
     # Approach 2: makes subsets II problem straightforward.
     def solve2(self, nums):
