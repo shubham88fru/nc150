@@ -10,7 +10,7 @@ SC: O(1)
 -----------------
 BETTER: Backtrack
 -----------------
-TC: O(n*2ˆn)
+TC: O(n*2ˆn) - its n*2ˆn because `n` time is needed each time to copy the subset and we have 2 options.
 SC: O(n); auxiliary stack space.
 
 ----------------------------------------------
