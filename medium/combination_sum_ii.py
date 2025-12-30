@@ -23,7 +23,7 @@ SC: O(2n)
 # @link - https://neetcode.io/problems/combination-target-sum-ii
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        return self.solve(candidates, target)
+        return self.revise(candidates, target)
 
     # This problem also has duplicates and so
     # it's beneficial to use the better approach of

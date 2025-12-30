@@ -1,27 +1,47 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+-----------------
+OPTIMAL: Good dfs
+-----------------
+TC: O(nlog(n) + n*2ˆn)
+SC: O(n); recursive stack space.
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+------------------------------------------------
+BRUTE: Pick-notPick patter with set and sorting.
+------------------------------------------------
+TC: O(nlog(n)*n*2ˆn); sorting each time we get a result.
+SC: O(2n)
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/subsets-ii
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        return self.solve(nums)
+        return self.revise(nums)
 
     # Slight modification to appraoch 2 from subsets problem.
     # Approach 2 keeps the soln much more neater.
     # Check java repo for the nasty soln for this soln which
     # modifies approach 1 of the subsets problem to solve this q.
-    def solve(self, nums):
-        nums.sort()  # extra step
+    def revise(self, candidates):
+        n = len(candidates)
         ans = []
-        self.bactrack2(nums, 0, ans, [])
+        self.backtrack2(n, sorted(candidates), 0, ans, [], set())
         return ans
 
-    def bactrack2(self, nums, idx, ans, curr):
-        ans.append(list(curr))
+    def backtrack2(self, n, candidates, idx, ans, sub, st):
+        ans.append(sub[:])
 
-        for i in range(idx, len(nums)):
-            if i != idx and nums[i] == nums[i - 1]:  # extra step
+        for i in range(idx, n):
+            if i > idx and candidates[i] == candidates[i - 1]:
                 continue
 
-            curr.append(nums[i])
-            self.bactrack2(nums, i + 1, ans, curr)
-            curr.pop()
+            sub.append(candidates[i])
+            self.backtrack2(n, candidates, i + 1, ans, sub, st)
+            sub.pop()
