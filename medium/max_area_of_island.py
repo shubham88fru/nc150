@@ -1,5 +1,25 @@
 from typing import List
 
+""""""""""""""""""""""""""""
+---------------------------
+OPTIMAL: DFS/BFS/Union Find
+---------------------------
+TC: O(m*n); visiting each cell atmost once.
+SC: O(m*n)
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 # @link - https://neetcode.io/problems/max-area-of-island
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
