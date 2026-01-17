@@ -5,7 +5,7 @@ from typing import List
 OPTIMAL: DFS/BFS/Union Find
 ---------------------------
 TC: O(m*n); bc each cell is visited atmost once.
-SC: O(1)
+SC: O(m*n); recursive stack space.
 
 ------------------------------------
 BETTER:
