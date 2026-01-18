@@ -1,6 +1,26 @@
 from collections import deque
 from typing import Optional
 
+""""""""""""""""""""""""""""
+----------------
+OPTIMAL: BFS/DFS
+----------------
+TC: O(n); n is number of nodes in graph.
+SC: O(n); for map
+
+------------------------------------
+BETTER:
+------------------------------------
+TC:
+SC:
+
+----------------------------------------------
+BRUTE:
+----------------------------------------------
+TC:
+SC:
+
+"""""""""""""""""""""""""""
 
 # Definition for a Node.
 class Node:
